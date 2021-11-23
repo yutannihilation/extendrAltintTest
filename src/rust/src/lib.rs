@@ -1,5 +1,7 @@
 use extendr_api::prelude::*;
 
+// This code is derived from extendr's test code
+
 #[derive(Debug, Clone)]
 struct MyCompactIntRange {
     start: i32,
@@ -22,7 +24,6 @@ impl AltIntegerImpl for MyCompactIntRange {
 /// @export
 #[extendr]
 fn get_intrange() -> Robj {
-    // index 5 is missing
     let mystate = MyCompactIntRange {
         start: 0,
         len: 10,
